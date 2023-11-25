@@ -8,6 +8,8 @@ body {
 }
 
 .center {
+  animation: fadeIn 5s;
+  
   margin: 10;
   position: absolute;
   top: 50%;
