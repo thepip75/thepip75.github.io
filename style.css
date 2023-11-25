@@ -31,65 +31,6 @@ body {
   padding: 25px;
 }
 
-.pfp {
-  animation-delay: 1.5s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.title {
-  animation-delay: 2s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.title {
-  animation-delay: 2.5s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.splash {
-  animation-delay: 3s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linka {
-  animation-delay: 3.5s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linkb {
-  animation-delay: 3.75s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linkc {
-  animation-delay: 4s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linkd {
-  animation-delay: 4.25s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linke {
-  animation-delay: 4.5s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.linkf {
-  animation-delay: 4.75s;
-  animation: fadeIn 1.5s;
-  animation-fill-mode: forwards;
-}
 
 footer {
   width: 100%;
