@@ -7,12 +7,14 @@ body {
   margin: 0;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .center {
-  animation: fadeIn 1s;
-  -webkit-animation: fadeIn 1s;
-  -moz-animation: fadeIn 1s;
-  -o-animation: fadeIn 1s;
-  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1.5s;
+  animation-fill-mode: forwards;
   
   margin: 10;
   position: absolute;
@@ -29,9 +31,44 @@ body {
   padding: 25px;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+.pfp {
+  animation-delay: 1.5s;
+}
+
+.title {
+  animation-delay: 2s;
+}
+
+.title {
+  animation-delay: 2.5s;
+}
+
+.splash {
+  animation-delay: 3s;
+}
+
+.linka {
+  animation-delay: 3.5s;
+}
+
+.linkb {
+  animation-delay: 3.75s;
+}
+
+.linkc {
+  animation-delay: 4s;
+}
+
+.linkd {
+  animation-delay: 4.25s;
+}
+
+.linke {
+  animation-delay: 4.5s;
+}
+
+.linkf {
+  animation-delay: 4.75s;
 }
 
 footer {
