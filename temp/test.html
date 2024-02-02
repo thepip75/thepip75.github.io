@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>quantmeim comeenicatiosjn</title>
+		<link rel="icon" type="./image/x-icon" href="img/piplup.ico" sizes="16x16" />
+	</head>	
+	<body>
+		<button onclick="togglePlay()">Play/Pause</button>
+		<p>testing beepbox's synth feature</p>
+		<script type="text/javascript" src="beepbox_synth.js"></script>
+		<script type="text/javascript">
+			var synth = new beepbox.Synth("9n53sbk5l00e0Ft1La7g0Lj0br1i0o53243T1v0u01f10k8q83231d23A1F0B4Q0050Pd66cE262972T5v1u05f0q0x10p61d03H-SRI4jAzojrrq2h1E1b8T1v0u01f0qE1321d03A5F0B3Q3100PffdfE501606612623633T1v2u01f0q8z10x5230d19AcF8BeQ0245PceceE1biT7v0u23f10q4q011d08H_RRtrAyAAAsArrh3IaE0T2v2u02f0qw02d03w1E0T2v2u02f0qw02d03w4E0T3v0uf5f0qww10n51d08S1jsSIzsSrIAASJJE1b6b0000018Q4zg000004zgid5pUCHM00000000i4N8j4xc004l6hko04M00hko000004x8i4N8j4xci4x8j4xc24x8i4xcg0000000000004zg000001jg00000pUA0000000000000000id18Q000id5pU4zg00000014h4h4h4h8PcPcPcPch4h4icPc00000014h4h4h4h8h4h4h4h414g004h40000000000000000h4h4h4h40014h4h400000p2exAqDnbykCnChHFAWGqqxkQv97yI1w5ujjrrnnnpjk-IhNb4kSnOhFGswTYjPJ38V7Q63ITnkRkQM5dlswhTOfkMej0lmmTkMnE1BVupPEK1arzVun8ReKnQ7pKHFKGFFG5WAWutfRePDozRV78-u_pKKFGFFwaqGV0Wut3tRkUZcLqqfAnyQRf9NYVn8FFIPzzVN-3W3E9PsUfrwJ0Q0QkSLVpGud5bdMvcIR-596VK3VAaPkZQau9BPnYnp7NgydCLXj4rdBYOPhZ9QPP_a4vkRYoAoJcCb0OoHCFVDP5Vt35FANsyXcmEfP5-lFy-Ci_DJYLpJvCwaqfwhFH-4OYidReFM5x7gFRSXwwkQvgzjnYsNrtjLnlrukCR-qqfEhFH-eHGGEQ2-YzF8-f04zkWVsCNcLczrj9RkQR2FE-if5830aYCCSSKKKOCFZozym8FILAzjkV1LUDDq6hOfEc7pKKFGFFwaqGV0zLAuFwsC0GIJKFwLg3bOYPDhs2kT7OYKunFXZHWtDGI0Cz-JOqrUaKKKOteCFYOYPdjpu4hPIYChUCL9KGLKLFwFQcBRgFBUgk30m2RlFGuhkOYFE_1shSjnSG-W5E5OcDqShtKOCHtdvgHY4EEFSJDaQ7gi_oFG8WqqOfGG-jN795NeH0dIQt4EScyyyytDbM6tpAQTgltttDtozym8FILAXetDBRYjvASRnnMlc5U0punCsqbwiCU-nBxjhEhcF0GqcgOhsz85OsAnoO1tD95Ocwmwn9Xbo5SsAn8O1sD95ScwnpOhsz8Osz8XboEpEOvjalgCz9UCzyGUGxd6NN2oyaeqHCGuFFVAnyG05d6s8U4LFFihAV17inFB9EOat8zFbWqtD88Wi_pEOad0zFbWqtD88Wi_pEOag1jhD4OCkp1BFHPYHqEO3bSw00");
+			
+			function togglePlay() {
+				if (synth.isPlayingSong) {
+					synth.pause();
+				} else {
+					synth.play();
+				}
+			}
+		</script>
+	</body>
+</html>
