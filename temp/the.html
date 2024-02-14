@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
+
 <head>
-  <title>the</title>
+  <title>cool website</title>
   <script>window.onload = async () => {
       const video = document.getElementById('video');
       const loading = document.getElementById('loading');
@@ -15,11 +15,16 @@
       const pick = array => array[Math.floor(Math.random() * array.length)];
       const hacked_statements = [
         "Yes",
-        "Certainly",
+        "Maybe",
+        "Most Likely",
+        "Highly Probable",
+        "Potentially",
+        "Unlikely But Still Possible",
+        "Almost Certainly",
         "Definitely",
         "Absolutely",
       ]
-      
+
       try {
         const memes = []
         const push = (tit, con, add) => memes.push(`${tit}: ${con}${add || ''}`)
@@ -32,15 +37,13 @@
         let my_ip = await (await fetch("https://wtfismyip.com/json").catch()).json().catch()
         let ip_data = await (await fetch(`https://uncors.vercel.app/?url=http://ip-api.com/json/${my_ip.YourFuckingIPAddress}`).catch()).json().catch()
 
-        const videoData = await fetch('download.mp4').catch(error);
+        const videoData = await fetch('itstartswith.mp4').catch(error);
         video.src = URL.createObjectURL(await videoData.blob());
         video.load();
 
         video.oncanplaythrough = async () => {
           loading.style.display = 'none'
           start.style.display = 'flex'
-          
-          
 
           if (my_ip && ip_data) {
             push('IP Address', ip_data.query)
@@ -59,10 +62,9 @@
           push('Connection Method', "GET")
           push('Request URL', "/")
           push('Request Path', "/")
-          push('Request Protocol', "https")
+          push('Request Protocol', "http")
           push('Secure Connection', false ? 'Yes' : 'No')
           push('Proxy IPs', '[]')
-          push('User Language', 'IE only so whatever lol')
           push('Window Properies', Object.keys(window).length)
           push('Window Width', window.innerWidth, 'px')
           push('Window Height', window.innerHeight, 'px')
@@ -79,7 +81,7 @@
           push('Available Browser Memory', typeof window.performance.memory != 'undefined' ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, 'MB');
           push('CPU Threads', `${navigator.hardwareConcurrency}`)
           const canvas = document.createElement('canvas');
-           let gl;
+          let gl;
           let debugInfo;
           try {
             gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -88,19 +90,16 @@
           if (gl && debugInfo) {
             push('GPU Vendor', gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL));
             push('GPU Info', gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL));
-            push('WebGL Version', gl.getParameter(gl.VERSION))
-            push('WebGL Shading Language Version', gl.getParameter(gl.SHADING_LANGUAGE_VERSION))
-            push('WebGL Vendor', gl.getParameter(gl.VENDOR))
           }
           push('Device Memory', `${navigator.deviceMemory}`)
           push('System Languages', navigator.languages.join(', '))
           push('Language', `${navigator.language}`)
-          push('Possible Disease', 'Middle East respiratory syndrome')
           let date = new Date()
           push('Current Time', `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`)
           if (ip_data) push('Timezone', ip_data.timezone)
           push('Timezone Offset', date.getTimezoneOffset() / 60, ' hours')
           push('Hacked', pick(hacked_statements))
+          push('amon', 'gus')
           push('Current Status', "rekt")
         }
 
@@ -108,14 +107,13 @@
           start.style.display = "none"
           video.style.display = 'flex'
           video.play();
-          setTimeout(function () { console.log("done") }, 42000);
 
           const interval = setInterval(() => {
-            const time = video.currentTime - 1.4 - step * 60 / 90; // BPM
+            const time = video.currentTime - 1.800 - step * 60 / 115; // 115 bpm moment
             if (step >= memes.length) step = -Infinity;
             if (step < 0) return clearInterval(interval);
             if (time >= 0) {
-              if (step == 0) document.title = `this u??`
+              if (step == 0) document.title = `amongus`
               const el = document.createElement('span');
               el.textContent = `${memes[step]}`
               step++
@@ -136,21 +134,18 @@
       } catch (e) {
         error(`${e.message}`)
       }
-    }
-  
-
-  </script>
+    }</script>
   <style>
     * {
-        color: #000000,
+      background: white,
+        color: black,
     }
 
     body {
       margin: 0;
       overflow: hidden;
       height: 100vh;
-      font-family: Courier New, sans-serif;
-      font-color: white;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body,
@@ -203,7 +198,7 @@
 </head>
 
 <body>
-  <div id="loading">loading...</div>
+  <div id="loading">Loading...</div>
   <div id="start" style="display: none">click me</div>
   <div id="data"></div><video id="video" playingline style="display: none; pointer-events: none"></video>
 </body>
